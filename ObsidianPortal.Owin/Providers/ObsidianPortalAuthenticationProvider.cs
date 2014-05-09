@@ -8,9 +8,17 @@ namespace NoTPK.Owin.Security.ObsidianPortal.Providers
 		public ObsidianPortalAuthenticationProvider()
 		{
 			OnAuthenticated = context => (Task)Task.FromResult<object>(null);
+			OnReturnEndpoint = context => Task.FromResult<object>(null);
+			OnApplyRedirect = context =>
+				context.Response.Redirect(context.RedirectUri);
 		}
 
 		public Func<ObsidianPortalAuthenticatedContext, Task> OnAuthenticated { get; set; }
+	
+		public Func<ObsidianPortalReturnEndpointContext, Task> OnReturnEndpoint { get; set; }
+
+		public Action<ObsidianPortalApplyRedirectContext> OnApplyRedirect { get; set; }
+
 		public Task Authenticated(ObsidianPortalAuthenticatedContext context)
 		{
 			return this.OnAuthenticated(context);
@@ -18,12 +26,12 @@ namespace NoTPK.Owin.Security.ObsidianPortal.Providers
 
 		public Task ReturnEndpoint(ObsidianPortalReturnEndpointContext context)
 		{
-			throw new System.NotImplementedException();
+			return this.OnReturnEndpoint(context);
 		}
 
 		public void ApplyRedirect(ObsidianPortalApplyRedirectContext context)
 		{
-			throw new System.NotImplementedException();
+			this.OnApplyRedirect(context);
 		}
 	}
 }
