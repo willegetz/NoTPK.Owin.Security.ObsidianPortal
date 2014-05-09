@@ -1,9 +1,9 @@
-﻿using NoTPK.Owin.Security.ObsidianPortal.Providers;
-using Owin;
+﻿using NoTPK.Owin.Security.ObsidianPortal;
+using NoTPK.Owin.Security.ObsidianPortal.Providers;
 using System;
 using System.Security.Claims;
 
-namespace NoTPK.Owin.Security.ObsidianPortal
+namespace Owin
 {
 	public static class ObsidianPortalAuthenticationExtensions
 	{
