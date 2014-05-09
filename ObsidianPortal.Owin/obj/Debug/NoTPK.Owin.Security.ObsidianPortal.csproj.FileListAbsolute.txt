@@ -1,0 +1,10 @@
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\obj\Debug\NoTPK.Owin.Security.ObsidianPortal.csprojResolveAssemblyReference.cache
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\NoTPK.Owin.Security.ObsidianPortal.dll
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\NoTPK.Owin.Security.ObsidianPortal.pdb
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\Microsoft.Owin.dll
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\Owin.dll
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\Microsoft.Owin.xml
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\obj\Debug\NoTPK.Owin.Security.ObsidianPortal.dll
+C:\Users\WYG\Documents\Development\Personal\NoTPK.Owin.Security.ObsidianPortal\ObsidianPortal.Owin\obj\Debug\NoTPK.Owin.Security.ObsidianPortal.pdb
