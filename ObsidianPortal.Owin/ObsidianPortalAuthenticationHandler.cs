@@ -99,7 +99,8 @@ namespace NoTPK.Owin.Security.ObsidianPortal
 				context.Identity = new ClaimsIdentity(
 					new[]
 					{
-						new Claim(ClaimTypes.Authentication, accessToken.Token), 
+						new Claim("urn:tokens:obsidianportal:accesstoken", accessToken.Token),
+						new Claim("urn:tokens:obsidianportal:accesstokensecret", accessToken.TokenSecret),
 						new Claim(ClaimTypes.NameIdentifier, accessToken.UserId, "http://www.w3.org/2001/XMLSchema#string", Options.AuthenticationType),
 						new Claim(ClaimTypes.Name, accessToken.ScreenName, "http://www.w3.org/2001/XMLSchema#string", Options.AuthenticationType),
 						new Claim("urn:obsidianprotal:userid", accessToken.UserId, "http://www.w3.org/2001/XMLSchema#string", Options.AuthenticationType),
@@ -122,46 +123,6 @@ namespace NoTPK.Owin.Security.ObsidianPortal
 				return NullIdentityTicket(properties);
 			}
 		}
-
-		//		private Json GetUserInfo(string _consumerKey, string _consumerSecret, string _token, string _tokenSecret)
-		//		{
-		//			HttpWebRequest request;
-		//			WebResponse response;
-		//			string timeStamp;
-		//			string nonce;
-		//			string outAddress;
-		//			string outParams;
-		//			string signature;
-		//			string postHeader;
-		//			OAuthBase oauth;
-		//			Uri uri;
-		//
-		//			try
-		//			{
-		//
-		//				timeStamp = GenerateTimeStamp();
-		//				nonce = Guid.NewGuid().ToString("N");
-		//
-		//				uri = new Uri(UnserInfoRequest);
-		//				signature = ComputeSignature(_consumerSecret, _tokenSecret, "");
-		//					"GET", timeStamp, nonce, out outAddress, out outParams);
-		//				signature = oauth.UrlEncode(signature);
-		//
-		//				postHeader = "OAuth oauth_nonce={0}, oauth_signature_method={1}, oauth_timestamp={2}, oauth_consumer_key={3}, oauth_token={5},  oauth_signature={4}, oauth_version=1.0";
-		//				postHeader = string.Format(postHeader, nonce, "HMAC-SHA1", timeStamp, _consumerKey, signature, _token);
-		//				request = WebRequest.Create(outAddress) as HttpWebRequest;
-		//				request.Method = "GET";
-		//				request.Headers.Add("Authorization:" + postHeader);
-		//
-		//				response = request.GetResponse();
-		//			}
-		//			catch (WebException ex)
-		//			{
-		//				throw new Exception(ex.Message + "\n" + GetResponseText(ex.Response));
-		//			}
-		//
-		//			return GetResponseText(response);
-		//		}
 
 		protected override async Task ApplyResponseChallengeAsync()
 		{

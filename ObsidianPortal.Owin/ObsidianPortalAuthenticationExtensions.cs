@@ -29,16 +29,8 @@ namespace Owin
 			{
 				ConsumerKey = appId,
 				ConsumerSecret = appSecret,
-				Provider = new ObsidianPortalAuthenticationProvider()
-				{
-					OnAuthenticated = async context =>
-					{
-						context.Identity.AddClaim(new Claim("urn:tokens:obsidianportal:accesstoken", context.AccessToken));
-						context.Identity.AddClaim(new Claim("urn:tokens:obsidianportal:accesstokensecret", context.AccessTokenSecret));
-					}
-				}
 			};
-
+			
 			return UseObsidianPortalAuthentication(app, options);
 		} 
 	}

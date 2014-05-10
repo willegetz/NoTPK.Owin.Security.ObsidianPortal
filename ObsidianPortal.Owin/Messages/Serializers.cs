@@ -2,7 +2,7 @@
 
 namespace NoTPK.Owin.Security.ObsidianPortal.Messages
 {
-	public class Serializers
+	public static class Serializers
 	{
 		public static IDataSerializer<RequestToken> RequestToken { get; set; }
 
