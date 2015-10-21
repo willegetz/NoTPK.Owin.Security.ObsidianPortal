@@ -10,8 +10,8 @@ Create an Obsidian Portal app to get your unique Client ID and Client Secret fro
 	Add the following to Startup.Auth.cs (VS2013) or AuthConfig.cs (VS2012):
 
             app.UseObsidianPortalAuthentication(
-                clientId: "",
-                clientSecret: "");
+                appId: "",
+                appSecret: "");
 
 
 	Add the following to the AccountController.cs
